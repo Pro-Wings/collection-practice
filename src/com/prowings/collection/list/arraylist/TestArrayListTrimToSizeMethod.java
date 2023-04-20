@@ -32,6 +32,13 @@ public class TestArrayListTrimToSizeMethod {
 	}
 
 	
+    /**
+     * This is a custom made reflection method used to check the capacity of arraylist
+     * 
+     * @param l is the array list
+     * @return returns the capacity
+     * @throws Exception
+     */
     public static int getCapacity(ArrayList<?> l) throws Exception {
         Field dataField = ArrayList.class.getDeclaredField("elementData");
         dataField.setAccessible(true);
