@@ -61,6 +61,7 @@ public class TestVectorCursors {
 		while(itr.hasNext())
 		{
 			System.out.println(itr.next());
+			v.add("fff");
 		}
 		System.out.println("iterating using Iterator - ended!!");
 	}
