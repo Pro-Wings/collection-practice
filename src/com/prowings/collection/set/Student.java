@@ -1,26 +1,28 @@
 package com.prowings.collection.set;
 
-import java.util.Objects;
-
 public class Student {
 
 	int roll;
 	String name;
+	int marks;
 
 	public Student() {
 		super();
 	}
 
-	public Student(int roll, String name) {
+	public Student(int roll, String name, int marks) {
 		super();
 		this.roll = roll;
 		this.name = name;
+		this.marks = marks;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [roll=" + roll + ", name=" + name + "]";
+		return "Student [roll=" + roll + ", name=" + name + ", marks=" + marks + "]";
 	}
+
+	
 //	@Override
 //	public int hashCode() {
 //		return Objects.hash(name, roll);

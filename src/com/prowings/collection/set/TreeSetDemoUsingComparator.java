@@ -1,5 +1,6 @@
 package com.prowings.collection.set;
 
+import java.util.Comparator;
 import java.util.TreeSet;
 
 public class TreeSetDemoUsingComparator {
@@ -23,6 +24,13 @@ public class TreeSetDemoUsingComparator {
 		ts.add(p3);
 
 		System.out.println(ts);
+		
+		Comparator cmp = ts.comparator();
+		
+		if(cmp != null)
+			System.out.println(cmp.getClass().getName() +" comparator used");
+		else
+			System.out.println("comparable used");
 	}
 
 }
