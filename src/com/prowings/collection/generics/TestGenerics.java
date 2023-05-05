@@ -17,6 +17,8 @@ public class TestGenerics {
 		b2.setItem(1234);
 		System.out.println(b2.getItem());
 		
+//		Box<int> b3 = new Box<>(); //CE - as generic dont work for primitives 
+		
 		Pair<String, Integer> pair = new Pair<>();
 		
 		pair.setKey("aaa");
