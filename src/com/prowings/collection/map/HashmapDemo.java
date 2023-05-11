@@ -43,7 +43,7 @@ public class HashmapDemo {
 		myMap2.clear();
 		
 		System.out.println("myMap2 after clear : " + myMap2);
-		
+		https://javaconceptoftheday.com/how-hashmap-works-internally-in-java/
 		
 		
 		System.out.println("before remove : "+myMap);
