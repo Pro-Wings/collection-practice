@@ -2,7 +2,7 @@ package com.prowings.collection.map;
 
 import java.util.Objects;
 
-public class Car {
+public class Car  implements Comparable<Car>{
 	
 	int model;
 	String company;
@@ -40,6 +40,24 @@ public class Car {
 		return Objects.equals(company, other.company) && model == other.model;
 	}
 
+//	@Override
+//	public int compareTo(Car o) {
+//		
+//		if(this.model == o.model)
+//			return 0;
+//		else if(this.model > o.model)
+//			return 2;
+//		else
+//			return -2;
+//					
+//	}
+
+	@Override
+	public int compareTo(Car o) {
+		
+		return this.company.compareTo(o.company);
+					
+	}
 	
 	
 }
