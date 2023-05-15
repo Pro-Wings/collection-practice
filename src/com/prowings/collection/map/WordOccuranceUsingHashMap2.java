@@ -2,13 +2,14 @@ package com.prowings.collection.map;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 public class WordOccuranceUsingHashMap2 {
 	
 	public static void main(String[] args) {
 		
 		
-		String input = "India is my country India has 29 states India is beautiful country";
+		String input = "india is my country india has 29 states india is beautiful country";
 		
 		//OP should be occurance of each word from input string
 		
@@ -32,7 +33,15 @@ public class WordOccuranceUsingHashMap2 {
 		{
 			System.out.println(k +" : " + wordCountMap.get(k));
 		}
-				
+		
+		TreeMap<String, Integer> sortedMap = new TreeMap<>(wordCountMap);
+		
+		System.out.println(">>>>>>>>>>> after sort by keys <<<<<<<<<<<");
+		System.out.println(sortedMap);
+		
+		System.out.println(">>>>>>>>>>> after sort by Values <<<<<<<<<<<");
+		
+		
 	}
 
 }
