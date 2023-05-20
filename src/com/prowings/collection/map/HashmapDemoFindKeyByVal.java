@@ -19,7 +19,7 @@ public class HashmapDemoFindKeyByVal {
 		
 		System.out.println("find key by specified value : ");
 		
-		Integer value = 111;
+		Integer value = 999;
 		
 		String key = getKey(myMap, value);
 		
