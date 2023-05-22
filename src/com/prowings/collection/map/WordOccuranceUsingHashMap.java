@@ -1,7 +1,13 @@
 package com.prowings.collection.map;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class WordOccuranceUsingHashMap {
 	
@@ -32,11 +38,31 @@ public class WordOccuranceUsingHashMap {
 			}
 		}
 		
-		for(String k : wordCountMap.keySet())
-		{
-			System.out.println(k +" : " + wordCountMap.get(k));
-		}
+		System.out.println("before sorting by values : " + wordCountMap);
+		
+		Map<String, Integer> sortByCountMap = sortByValues(wordCountMap);
 
+		System.out.println("after sorting by values : " + sortByCountMap);
+		
 	}
 
+	private static Map<String, Integer> sortByValues(HashMap<String, Integer> map) {
+		
+		Set<Map.Entry<String, Integer>> entriesSet = map.entrySet();
+		
+		List<Map.Entry<String, Integer>> entriesList = new ArrayList<>(entriesSet);
+		
+		Collections.sort(entriesList, new EntryComparatorByValue());
+		
+		Map<String, Integer> sortedMap = new LinkedHashMap<>();
+		
+		for(Map.Entry<String, Integer> entry : entriesList)
+		{
+			sortedMap.put(entry.getKey(), entry.getValue());
+		}
+		
+		return sortedMap;
+	}
+
+	
 }
